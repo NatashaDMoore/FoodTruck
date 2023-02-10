@@ -22,36 +22,39 @@ include('cart.php'); // links cart.php to form (when created)
         <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
         <fieldset>
 
+            <!-- foreach loop that lists menu items -->
             <?php foreach ($items as $item): ?>
                 <div class="menu">
 
-                <h3><?php echo $item->Name; ?></h3>
-                    <p><?php echo $item->Description; ?></p>
-                    <p>Price: $<?php echo $item->Price; ?></p>
-                    <p>
-                        <label for="quantity-<?php echo $item->ID; ?>">Quantity:</label>
-                        <input type="number" id="quantity-<?php echo $item->ID; ?>" name="quantity-<?php echo $item->ID; ?>" value="0">
-                    </p>
+                    <h3><?php echo $item->Name; ?></h3>
+                        <p><?php echo $item->Description; ?></p>
+                        <p>Price: $<?php echo $item->Price; ?></p>
+                        <p>
+                            <label for="<?php echo $item->Quantity; ?>">Quantity:</label>
+                            <input type="number" name="<?php echo $item->Quantity; ?>" id="<?php echo $item->ID; ?>" value="0">
+                        </p>
 
                 <!-- This if statement checks if the Extras property has content. If it does, it will show them. -->
-                <?php if (!empty($item->Extras)): ?>
-                    <p>Extras:</p>
-                    <ul>
-                        <?php foreach ($item->Extras as $extra): ?>
-                            <li>
-                                <label for="extra-<?php echo $item->ID; ?>-<?php echo $extra; ?>">
-                                    <input type="checkbox" id="extra-<?php echo $item->ID; ?>-<?php echo $extra; ?>" name="extra-<?php echo $item->ID; ?>-<?php echo $extra; ?>"> <?php echo $extra; ?>
-                                </label>
-                            </li>
-                        <?php endforeach; ?> <!-- end $extra list -->
-                    </ul>
-                <?php endif; ?> <!-- end if not empty -->
-                </div>
-            <?php endforeach; ?> <!-- end $items -->
+                    <?php if (!empty($item->Extras)): ?>
+                        <p>Extras:</p>
+                        <ul>
+                            <?php foreach ($item->Extras as $extra): ?>
+                                <li>
+                                    <label for="<?php echo $item->ID; ?>-<?php echo $extra; ?>">
+                                        <input type="checkbox" name="<?php echo $item->ID; ?>.<?php echo $extra; ?>"> <?php echo $extra; ?>
+                                    </label>
+                                </li>
+                            <?php endforeach; ?> <!-- end $extra list -->
+                        </ul>
+                    <?php endif; ?> <!-- end if not empty -->
+
+                </div> <!-- end menu div -->
+
+            <?php endforeach; ?> <!-- end items foreach -->
 
 
             <!-- Submit -->
-            <input type="submit" value="Place Order">
+            <input type="submit" value="Checkout">
         
             <!-- Reset -->
             <p><a href="">RESET</a></p>
