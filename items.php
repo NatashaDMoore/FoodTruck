@@ -8,13 +8,13 @@ $myItem->addExtra("Broccoli");
 $myItem->addExtra("Fish Sauce");
 $items[] = $myItem;
 
-$myItem = new Item(2,"Pad Si Lew","Stir fried wide rice noodles with sweet soy sauce, eggs, and Chinese broccoli. Choice of chicken or tofu.",11.99);
+$myItem = new Item(2,"Drunken Noodles","Crispy thick rice noodle, onion, red bell pepper and basil. Stir fried in savory, sweet and spicy sauce.",11.99);
 $myItem->addExtra("Extra Spice");
 $myItem->addExtra("Broccoli");
 $myItem->addExtra("Side of Rice");
 $items[] = $myItem;
 
-$myItem = new Item(3,"Pad Thai","Stir Fried thin noodles with tamarind sauce, bean sprouts, eggs, tofu and topped with ground peanuts. Choice of chicken or tofu.",10.99);
+$myItem = new Item(3,"Pad Thai","Stir Fried thin noodles with tamarind sauce, bean sprouts, eggs, tofu and topped with ground peanuts.",10.99);
 $myItem->addExtra("Extra Spice");
 $myItem->addExtra("Broccoli");
 $myItem->addExtra("Side of Rice");
@@ -26,9 +26,9 @@ $items[] = $myItem;
 //$items[] = new Item(2,"Sundae","Our Sundaes are awesome!",3.95);
 //$items[] = new Item(3,"Salad","Our Salads are awesome!",5.95);
 
-echo '<pre>';
-var_dump($items);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($items);
+// echo '</pre>';
 
 
 class Item
