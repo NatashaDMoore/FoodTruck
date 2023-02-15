@@ -3,21 +3,12 @@
 
 
 $myItem = new Item(1,"Fried Rice","Jasmine rice stir-fried in a flavorful garlic paste and eggs.",10.99);
-$myItem->addExtra("Spicy");
-$myItem->addExtra("Broccoli");
-$myItem->addExtra("Fish Sauce");
 $items[] = $myItem;
 
 $myItem = new Item(2,"Drunken Noodles","Crispy thick rice noodle, onion, red bell pepper and basil. Stir fried in savory, sweet and spicy sauce.",11.99);
-$myItem->addExtra("Spicy");
-$myItem->addExtra("Broccoli");
-$myItem->addExtra("Side of Rice");
 $items[] = $myItem;
 
 $myItem = new Item(3,"Pad Thai","Stir Fried thin noodles with tamarind sauce, bean sprouts, eggs, tofu and topped with ground peanuts.",10.99);
-$myItem->addExtra("Spicy");
-$myItem->addExtra("Broccoli");
-$myItem->addExtra("Side of Rice");
 $items[] = $myItem;
 
 
@@ -37,7 +28,6 @@ class Item
     public $Name = '';
     public $Description = '';
     public $Price = 0;
-    public $Extras = array();
     
     public function __construct($ID,$Name,$Description,$Price)
     {
@@ -47,12 +37,6 @@ class Item
         $this->Price = $Price;
         
     }#end Item constructor
-    
-    public function addExtra($extra)
-    {
-        $this->Extras[] = $extra;
-        
-    }#end addExtra()
 
  
 }#end Item class

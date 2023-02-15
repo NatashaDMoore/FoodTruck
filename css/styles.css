@@ -1,5 +1,122 @@
 /* Stlyes For Food Truck */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Marcellus SC', serif;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100%;
+}
+.background {
+    position: relative;
+}
+
+.background::before {
+    content: "";
+    min-height: 100vh;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    display: block;
+    background-image: url("../images/food-truck.jpg");
+    background-repeat: none;
+    background-position: center;
+    filter: opacity(25%);
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, auto-fit);
+    grid-row: 2;
+    grid-gap: 10px;
+    align-items: center;
+    justify-content: stretch;
+    position: relative;
+}
+
+.header {
+    grid-column: 1 / span 3;
+}
+
+.menu {
+    grid-column: 2 / span 1;
+    max-width: 500px;
+}
+
+.cart {
+    grid-column: 3 / span 1;
+}
+
+fieldset {
+    border: none;
+}
+
+td, th{
+    padding: 5px 10px;
+}
+
 li {
     list-style: none;
 }
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.totals {
+    margin-top: 10px;
+    border-top: 1px solid black;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 3px;
+}
+
+img {
+    margin: 15px auto;
+    width: 450px;
+    display: block;
+}
+
+
+/* Tyopography */
+
+h1 {
+    text-align: center;
+    font-size: 3.3rem;
+    margin: 15px auto 0px auto;
+    font-family: 'Julee', cursive;
+}
+
+h1.thx {
+    margin-top: 100px;
+}
+
+.subtitle {
+    text-align: center;
+    margin: 0px auto 20px auto;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin: 20px auto 5px auto;
+}
+
+p {
+    margin: 5px auto 15px auto;
+    font-size: 1.1rem;
+}
+
