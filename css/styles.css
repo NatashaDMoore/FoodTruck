@@ -94,6 +94,11 @@ img {
 
 /* Tyopography */
 
+.error {
+    color: rgb(171, 0, 0);
+    font-style: italic;
+}
+
 h1 {
     text-align: center;
     font-size: 3.3rem;

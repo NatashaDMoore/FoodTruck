@@ -55,6 +55,10 @@ include('cart.php'); // links cart.php
 
             <?php endforeach; ?> <!-- end $items foreach -->
 
+            <?php if (isset($error)): ?> <!-- error code -->
+                <p class="error"><?php echo $error; ?></p>
+            <?php endif; ?>
+
             <!-- Submit -->
             <input class="btn checkout" type="submit" name="checkout" value="Checkout" id="checkout">
         
