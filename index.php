@@ -43,12 +43,12 @@ include('cart.php'); // links cart.php
                         <p>
                             <label for="<?php echo $item->ID; ?>">Quantity:</label>
                             <select name="quantity_<?php echo $item->Name; ?>" id="quantity_<?php echo $item->Name; ?>">
-                                <option value=0>0</option>
-                                <option value=1>1</option>
-                                <option value=2>2</option>
-                                <option value=3>3</option>
-                                <option value=4>4</option>
-                            </select>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                        </select>
                         </p>
                                             
                 </div> <!-- end items div -->
@@ -60,7 +60,7 @@ include('cart.php'); // links cart.php
             <?php endif; ?>
 
             <!-- Submit -->
-            <input class="btn checkout" type="submit" name="checkout" value="Checkout" id="checkout">
+            <input class="btn checkout" type="submit" name="checkout" value="Checkout" id="checkout" <?php if(isset($_POST['checkout'])) { echo 'checked'; } ?>>
         
             <!-- Reset -->
             <!-- <p><a href="">RESET</a></p> -->
